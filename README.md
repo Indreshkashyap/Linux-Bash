@@ -1,6 +1,6 @@
 # Linux-Bash
 
-#run
+# run
 
 sh sum.sh
 
