@@ -1,0 +1,19 @@
+#!/bin/bash
+maxlen=0
+filename=()
+count=0
+for i in *
+do 
+if [ ${#i} -gt $maxlen ]
+then maxlen=${#i}
+filename=()
+count=0
+filename[count]=$i
+count=$((count+1))
+elif [ ${#i} -eq $maxlen ]
+then 
+filename[count]=$i
+count=$((count+1))
+fi
+done 
+echo ${filename[@]}

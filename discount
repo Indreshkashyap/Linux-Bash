@@ -1,0 +1,20 @@
+#!/bin/bash
+read -p "enter amount:" amt
+dsct=0
+
+if [ $amt -ge 1000 ] && [ $amt -le 2000 ]
+then 
+dsct=5
+elif [ $amt -ge 2001 ] && [ $amt -le 5000 ]
+then 
+dsct=10
+elif [ $amt -gt 5000 ]
+ then      	dsct=15 
+else
+	dsct=0
+fi
+disc=$((amt*dsct/100))
+total=$((amt-disc))
+echo "your amount $amt"
+echo "discount $dsct%"
+echo "total payable amount $total"
